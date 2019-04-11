@@ -7,36 +7,27 @@ import cv2                                    # OpenCV2 for saving an image
 import numpy as np
 
 
-
 bridge = CvBridge()                           # Instantiate CvBridge object
 
 
 def image_callback(msg):
     cv2_img = bridge.imgmsg_to_cv2(msg, "bgr8")   # Convert your ROS Image message to OpenCV2 
-
-    # Convert the image to a Numpy array since most cv2 functions
-    # require Numpy arrays.
-    frame = np.array(cv2_img, dtype=np.uint8)
-    
-    # Process the frame using the circle_detection() function
-    color_image = color_detection(frame)
-
+    frame = np.array(cv2_img, dtype=np.uint8) # Convert the image to a Numpy array since most cv2 functions. Require Numpy arrays.
+    color_image = color_detection(frame)      # Process the frame using the circle_detection() function
     cv2.waitKey(3)
 
 
-
 def color_detection(frame):
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)  # Converts images from BGR to HSV 
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)     # Converts images from BGR to HSV 
 
-    blue_lower = np.array([90,50,50],np.uint8)    #defining the range of Blue color
+    blue_lower = np.array([90,50,50],np.uint8)       # Defining the range of Blue color
     blue_upper = np.array([120,255,255],np.uint8)
 
-    mask = cv2.inRange(hsv, blue_lower, blue_upper)  #finding the range blue colour in the image
+    mask = cv2.inRange(hsv, blue_lower, blue_upper)  # Finding the range blue colour in the image
 
     cv2.imshow("image mask",mask)
 
-    # The bitwise and of the frame and mask is done so  
-    # that only the blue coloured objects are highlighted  
+    # The bitwise and of the frame and mask is done so that only the blue coloured objects are highlighted  
     # and stored in res 
     res = cv2.bitwise_and(frame,frame, mask= mask)
     cv2.imshow("color",res)

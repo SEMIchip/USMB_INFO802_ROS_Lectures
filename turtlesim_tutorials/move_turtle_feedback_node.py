@@ -23,7 +23,7 @@ def move_turtle(lin_vel,ang_vel,distance):
 
     global robot_x
 
-    rospy.init_node('move_turtle', anonymous=False)
+    rospy.init_node('move_turtle_feedback_node', anonymous=False)
     pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
     
     rospy.Subscriber('/turtle1/pose',Pose, pose_callback)
@@ -31,6 +31,7 @@ def move_turtle(lin_vel,ang_vel,distance):
     rate = rospy.Rate(10) # 10hz
  
     vel = Twist()
+	
     while not rospy.is_shutdown():
         
 	vel.linear.x = lin_vel

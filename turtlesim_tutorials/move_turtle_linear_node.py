@@ -1,12 +1,11 @@
-#! /usr/bin/python
 
 import rospy
-from geometry_msgs.msg import Twist
+XXXXXXXXXXXX  # import Twist
 
 def move_turtle():
 
      # Create a publisher to "talk" to Turtlesim 
-    pub = rospy.Publisher('turtle1/cmd_vel', Twist, queue_size=1)
+    pub = XXXXXXXXXXXX
      
     # Create a Twist message and add linear x and angular z values
     vel = Twist()
@@ -18,9 +17,10 @@ def move_turtle():
 
     # For the next 6 seconds publish vel move commands to Turtlesim
     while rospy.Time.now() < now + rospy.Duration.from_sec(6):
-        pub.publish(vel)
+        XXXXXXXXXXXX # publish velocity command to the Turtlesim
         rate.sleep()
 
+          
 if __name__ == '__main__':
     try:
         move_turtle()

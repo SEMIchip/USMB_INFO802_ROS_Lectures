@@ -21,7 +21,7 @@ def pose_callback(pose):
     yaw = pose.theta
 
     # printout the x and y position of the turtle1 in the consol (just for debugg)
-    rospy.loginfo("x = %f : y = %f\n",pose.x,pose.y)   
+    XXXXXXXXXXXXXXXXX  
 
 
 def pose_target_callback(pose):
@@ -32,7 +32,7 @@ def pose_target_callback(pose):
     target_y = XXXXX
 
     # printout the x and y position of the turtle2 in the consol (just for debugg)
-    rospy.loginfo("target x = %f : target y = %f\n",pose.x, pose.y)
+    XXXXXXXXXXXXXXXXXX
 
 
 
@@ -69,7 +69,7 @@ def move_turtle_to_target():
 	    # publish the value of the velocity for the turtle1
 	    XXXXX	
 
-	    if (distance <0.01):
+	    if (distance <0.01):  # Explain why we do this
 	        break
 
         rate.sleep()

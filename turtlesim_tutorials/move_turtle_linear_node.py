@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import rospy
-XXXXXXXXXXXX   # import Twist
+import rospy   # Import rospy library
+XXXXXXXXXXXX   # Import Twist message
 
 def move_turtle():
 
@@ -12,8 +12,8 @@ def move_turtle():
     pub = XXXXXXXXXXXX
      
     # Create a Twist message and change linear x value
-    vel = Twist()
-    vel.linear.x = 1.0  # Move along the x axis only
+    vel = Twist()       # Creates a 'Twist object'
+    vel.linear.x = 1.0  # Changing the 'x' value in the 'linear' vector of the 'Twist' object. (Move along the x axis only)
 
     # Save current time and set publish rate at 10 Hz
     tStart = rospy.Time.now()
@@ -21,7 +21,7 @@ def move_turtle():
 
     # For the next 6 seconds publish vel move commands to Turtlesim
     while rospy.Time.now() < tStart + rospy.Duration.from_sec(6):
-        XXXXXXXXXXXX  # publish velocity command to the Turtlesim
+        XXXXXXXXXXXX  # Publishes velocity command to the Turtlesim
         rate.sleep()
 
           

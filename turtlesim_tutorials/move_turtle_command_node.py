@@ -13,14 +13,14 @@ def move_turtle(lin_vel,ang_vel):
  
     vel = Twist()
     
-    while not rospy.is_shutdown():  
-	      vel.linear.x = lin_vel
-	      vel.linear.y = 0
-	      vel.linear.z = 0
+    while not rospy.is_shutdown():
+        vel.linear.x = lin_vel
+	vel.linear.y = 0
+	vel.linear.z = 0
 
-	      vel.angular.x = 0
-	      vel.angular.y = 0
-	      vel.angular.z = ang_vel
+        vel.angular.x = 0
+	vel.angular.y = 0
+	vel.angular.z = ang_vel
 
         rospy.loginfo("Linear Vel = %f: Angular Vel = %f",lin_vel,ang_vel)
 

@@ -3,14 +3,14 @@
 XXXXX  # import rospy
 XXXXX  # import Pose message 
 XXXXX  # import Twist message
-from math import atan2, sqrt
+from XXXXX import XXXXX, XXXXX  # import the mathematical functions atan2 and sqrt from the python module called maths
 import sys
 
-target_x = 0
-target_y = 0
-x = 0
-y = 0
-yaw = 0
+target_x = 0   # initialize the x coordinate of the target
+target_y = 0   # initialize the y coordinate of the target
+x = 0          # initialize the x coordinate of the turtle
+y = 0          # initialize the y coordinate of the turtle
+yaw = 0        # initialize the orientation of the turtle
 
 
 def pose_callback(pose):
@@ -36,7 +36,7 @@ def pose_target_callback(pose):
 
 
 
-def move_turtle_to_target():
+def turtle_to_target():
     # Initialise the node
     XXXXX
 
@@ -57,7 +57,7 @@ def move_turtle_to_target():
 	    # printout the distance in the consol (just for debugg)	
 	    rospy.loginfo("distance = %f\n",distance)
 
-        linear_speed = distance * K_linear
+        linear_speed = XXXXX  # computes the velocity of the proportional controller
 
         K_angular = 4.0
 	    steering_angle = XXXXX
@@ -81,7 +81,7 @@ if __name__ == '__main__':
         # Create a subscriber to the turtle2 pose topic (our target) in order to find its position
         sub_target = XXXXX
 
-        move_turtle_to_target()
+        turtle_to_target()
 
     except rospy.ROSInterruptException:
         pass

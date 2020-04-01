@@ -1,5 +1,0 @@
-<launch>
-  <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node" output="screen"/>
-  <node name="spawn_turtle" pkg="move_turtle" type="spawn_turtle.py" output="screen"/>
-  <node name="turtlesim_target_node" pkg="move_turtle" type="move_turtle_to_target_node.py" output="screen"/>
-</launch>

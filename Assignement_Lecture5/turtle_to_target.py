@@ -3,7 +3,7 @@
 XXXXX  # import rospy
 XXXXX  # import Pose message 
 XXXXX  # import Twist message
-from XXXXX import XXXXX, XXXXX  # import the mathematical functions atan2 and sqrt from the python module called maths
+from XXXXX import XXXXX, XXXXX  # import the mathematical functions atan2 and sqrt from the python module called math
 import sys
 
 target_x = 0   # initialize the x coordinate of the target

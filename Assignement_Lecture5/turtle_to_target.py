@@ -48,14 +48,15 @@ def turtle_to_target():
 
     rate = rospy.Rate(10) # 10hz
  
-    vel = Twist()
+    vel = XXXXX # creates a Twist object named vel
     
     while (True):
         K_linear = 0.5
-        # Euclidean distance between current pose and the target
-        distance = 
-	    # printout the distance in the consol (just for debugg)	
-	    rospy.loginfo("distance = %f\n",distance)
+
+        distance = XXXXX     # Computes the Euclidean distance between current pose and the target
+	    
+	# printout the distance in the consol (just for debugg)	
+	rospy.loginfo("distance = %f\n",distance)
 
         linear_speed = XXXXX  # computes the velocity of the proportional controller
 

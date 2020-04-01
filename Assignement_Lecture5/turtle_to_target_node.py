@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import rospy
-from XXXXX import XXXXX  # Pose object 
-from XXXXX import XXXXX  # Twist object 
+XXXXX  # import rospy
+XXXXX  # import Pose message 
+XXXXX  # import Twist message
 from math import atan2, sqrt
 import sys
 

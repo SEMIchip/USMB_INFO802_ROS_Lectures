@@ -9,7 +9,7 @@ def First_Subscriber_Node():
 
     rospy.init_node('First_Subscriber_Node', anonymous=True)
 
-    rospy.Subscriber('numbers', Int32, callback) # Substribes to topic "/numbers" and a read message of type Int32
+    rospy.Subscriber('numbers', Int32, callback) # Subscribes to topic "/numbers" and a read message of type Int32
 
     rospy.spin()
 

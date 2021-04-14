@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 XXXXX  # import rospy
 XXXXX  # import Pose message 

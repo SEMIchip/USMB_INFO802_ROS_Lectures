@@ -1,5 +1,0 @@
-<launch>
-  XXXXXX # run turtlesim node
-  XXXXXX # run spawn turtle node
-  XXXXXX # run turtlesim_target node
-</launch>
